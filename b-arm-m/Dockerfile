@@ -1,4 +1,4 @@
-FROM b-base
+FROM ivs0/b-base
 RUN apt-get install -y software-properties-common \
 	&& add-apt-repository ppa:george-edison55/cmake-3.x \
 	&& add-apt-repository ppa:terry.guo/gcc-arm-embedded \
