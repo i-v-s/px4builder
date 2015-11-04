@@ -7,7 +7,7 @@ RUN sh -c 'echo "deb http://packages.ros.org/ros/ubuntu $(lsb_release -sc) main"
     && apt-get install -y ros-indigo-ros-base \
     && rosdep init && rosdep update
 
-apt-get update && apt-get install -y git software-properties-common \
+RUN apt-get update && apt-get install -y git software-properties-common \
         && add-apt-repository ppa:george-edison55/cmake-3.x && apt-get update \
 	&& apt-get install -y zip make cmake gcc
 
