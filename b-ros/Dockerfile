@@ -5,7 +5,7 @@ RUN sh -c 'echo "deb http://packages.ros.org/ros/ubuntu $(lsb_release -sc) main"
     && apt-key adv --keyserver hkp://pool.sks-keyservers.net --recv-key 0xB01FA116 \
     && apt-get update \
     && apt-get install -y ros-jade-ros-base ros-jade-catkin ros-jade-gazebo-msgs python-catkin-tools \
-        ros-jade-mav-msgs ros-jade-roscpp ros-jade-rospy ros-jade-eigen ros-jade-tf 
+        ros-jade-mav-msgs ros-jade-roscpp ros-jade-rospy ros-jade-geometry \ 
         ros-jade-libmavconn ros-jade-rostest ros-jade-std-msgs \
     && rosdep init && rosdep update
     
