@@ -6,7 +6,7 @@ RUN sh -c 'echo "deb http://packages.ros.org/ros/ubuntu $(lsb_release -sc) main"
     && apt-get update \
     && apt-get install -y ros-jade-ros-base ros-jade-catkin ros-jade-gazebo-msgs python-catkin-tools \
         ros-jade-mav-msgs ros-jade-roscpp ros-jade-rospy ros-jade-geometry \ 
-        ros-jade-libmavconn ros-jade-rostest ros-jade-std-msgs \
+        ros-jade-libmavconn ros-jade-rostest ros-jade-std-msgs python-bloom\
     && rosdep init && rosdep update
     
 RUN apt-get install -y ros-jade-rqt
