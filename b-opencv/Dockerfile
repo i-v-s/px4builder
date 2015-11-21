@@ -8,5 +8,5 @@ RUN mkdir /opencv && cd /opencv \
 
 RUN mkdir /opencv/opencv-3.0.0/build && cd /opencv/opencv-3.0.0/build \
     && cmake -D CMAKE_BUILD_TYPE=RELEASE -D CMAKE_INSTALL_PREFIX=/usr/local -D WITH_TBB=ON -D WITH_V4L=ON \
-        && -D WITH_QT=ON -D WITH_OPENGL=ON .. \
+        -D WITH_QT=ON -D WITH_OPENGL=ON .. \
     && make -j 2 && make install
