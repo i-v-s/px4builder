@@ -4,9 +4,9 @@ RUN apt-get update \
 
 RUN mkdir /opencv && cd /opencv \
     && wget https://github.com/Itseez/opencv/archive/3.0.0.zip -O opencv-3.0.0.zip \
-    && unzip opencv-3.0.0.zip
-
-RUN mkdir /opencv/opencv-3.0.0/build && cd /opencv/opencv-3.0.0/build \
+    && unzip opencv-3.0.0.zip \
+    && mkdir /opencv/opencv-3.0.0/build && cd /opencv/opencv-3.0.0/build \
     && cmake -D CMAKE_BUILD_TYPE=RELEASE -D CMAKE_INSTALL_PREFIX=/usr/local -D WITH_TBB=ON -D WITH_V4L=ON \
         -D WITH_QT=ON -D WITH_OPENGL=ON .. \
-    && make -j 2 && make install
+    && make -j 2 && make install && rm -R /opencv
+
